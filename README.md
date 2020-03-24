@@ -1,5 +1,5 @@
 # springboot-course-api
-Currently I am learning rest api development using spring boot. Here I am going to follow javabrains.io Spring Boot Quick Start course. 
+Currently I am learning rest api development using spring boot. Here I am going to follow javabrains.io Spring Boot Quick Start course (https://www.youtube.com/playlist?list=PLmbC-xnvykcghOSOJ1ZF6ja3aOgZAgaMO). 
 
 Before jumping into the actual programming it is important to define some thing, it will be helpful to organize and maintain project in the long run.
 
