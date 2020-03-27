@@ -1,33 +1,29 @@
-package com.nadimemon.springbootcourseapi.course;
+package com.nadimemon.springbootcourseapi.topic;
 
-import javax.persistence.Column;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
-import org.hibernate.annotations.ManyToAny;
-
-import com.nadimemon.springbootcourseapi.topic.Topic;
+import com.nadimemon.springbootcourseapi.course.Course;
 
 @Entity
-public class Course {
-
+public class Topic {
 	@Id
 	private String id;
 	private String name;
 	private String description;
-	@ManyToOne
-	private Topic topic;
+	@OneToMany
+	private List<Course> courses;
 	
-	public Course() {
+	public Topic() {
 	}
-	
-	public Course(String id, String name, String description, Topic topic) {
+	public Topic(String id, String name, String description) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
-		this.topic=topic;
 	}
 	
 	public String getId() {
@@ -48,12 +44,5 @@ public class Course {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public Topic getTopic() {
-		return topic;
-	}
 
-	public void setTopic(Topic topic) {
-		this.topic = topic;
-	}
-	
 }
