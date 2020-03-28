@@ -18,3 +18,6 @@ Before jumping into the actual programming it is important to define some thing,
 	- Type based: Create separate package for each type, like controller, dao, service. In this application I am going to follow this structure though the actual course is folloing other structure.
 	
 	
+- Project details
+	- There are multiple topics
+		- There are multiple courses under each topic
