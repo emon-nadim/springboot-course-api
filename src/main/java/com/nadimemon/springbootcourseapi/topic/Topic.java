@@ -2,7 +2,10 @@ package com.nadimemon.springbootcourseapi.topic;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
@@ -14,7 +17,7 @@ public class Topic {
 	private String id;
 	private String name;
 	private String description;
-	@OneToMany
+    @OneToMany(mappedBy = "topic", cascade = CascadeType.ALL)
 	private List<Course> courses;
 	
 	public Topic() {

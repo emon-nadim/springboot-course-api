@@ -2,7 +2,10 @@ package com.nadimemon.springbootcourseapi.course;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.ManyToAny;
@@ -17,6 +20,7 @@ public class Course {
 	private String name;
 	private String description;
 	@ManyToOne
+    @JoinColumn(name = "topic_id", nullable = false)
 	private Topic topic;
 	
 	public Course() {
