@@ -2,6 +2,8 @@ package com.nadimemon.springbootcourseapi.topic;
 
 import java.util.List;
 
+import javax.persistence.EntityNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,7 +23,7 @@ public class TopicController {
 	}
 	
 	@RequestMapping(value="/topics/{id}", method=RequestMethod.GET)
-	public Topic getTopic(@PathVariable String id) {
+	public Topic getTopic(@PathVariable String id) throws EntityNotFoundException{
 		return topicService.getTopic(id);
 	}
 	
